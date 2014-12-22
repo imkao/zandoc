@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>赞医生</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script type="text/javascript" src="js/appplus.js" ></script>
+<link type="text/css" rel="stylesheet" href="css/all.css" media="all"/>
+<style type="text/css">
+body{padding:10px;}
+.reg1 .txt{padding:5px;}
+.reg1 .item{border-bottom:1px solid #eaeaea; padding:5px; position:relative;}
+.reg1 .item label{float:left; color:#333; width:76px;}
+.reg1 .item input{display:inline-block; height:22px; border:0; outline-style:none;}
+.reg1 .item span{color:#F00; position:absolute; right:5px; top:5px;}
+.headerpic{
+width:50px; height:50px; overflow:hidden; margin:auto;
+-webkit-border-radius:25px;
+-moz-border-radius:25px;
+border-radius:25px;
+}
+.reg1 .btnwap{text-align:center;}
+.reg1 .btn{
+	width:100%; margin:10px auto; background:#4e98c8; color:#FFF; height:42px; font-size:20px; font-family:'Microsoft YaHei';
+	border:0;
+	outline-style:none;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body class="reg1">
+<div class="headerpic"><img src="tmp/t1.jpg"/></div>
+<div class="txt">我们只为有执业医师资格的医师和相应资质护理人员提供服务，请确保你输入的信息准确，将来不可修改。</div>
+<div class="item"><label>姓名</label><input type="text" name="name" class="inp1" placeholder="请填写真实姓名"/><span>*</span></div>
+<div class="item"><label>性别</label><input type="text" name="sex" class="inp1" placeholder=""/><span>*</span></div>
+<div class="item"><label>手机号码</label><input type="number" name="mobile" class="inp1" placeholder="请填写有效号码"/><span>*</span></div>
+<div class="item"><label>生日</label><input type="date" name="brithday" class="inp1" placeholder="请填写真实姓名"/><span>*</span></div>
+<div class="btnwap"><button onClick="fsubmit()" class="btn">下一步</button></div>
+<script>
+function fsubmit(){
+	location.href="regs2.html";	
+}
+</script>
+</body>
+</html>

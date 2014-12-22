@@ -1,0 +1,28 @@
+/*
+-------------
+reset
+-------------
+*/
+body,p,button,h1,h2,h3,h4,h5,h6,a,em,ul,li{margin:0; padding:0;}
+body{color:#969696; font-size:100%; font-family:'Microsoft YaHei';}
+em{font-style:normal;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+img{border:0;}
+
+.clearfix{zoom:1;}
+.clearfix:after{content:''; display:block; height:0; clear:both;}
+.hidetxt{text-indent:-9999px; display:block;}
+/**
+--------
+layout
+--------
+**/
+.w1190{width:1190px; margin:auto;}
+.header{width:100%; background:#e70d55 url(../images/tpbg.png) bottom center; position:relative;}
+.content{background:#ffe8f2;}
+.footer{border-top:10px solid #ffdbea; background:#fff; padding:46px 0 30px 0;}
+.copyright{background:#ec1161; color:#fff; font-size:14px; padding:30px 0 20px 0; text-align:center;}
+
+
+
