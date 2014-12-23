@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>赞医生</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1,user-scalable=no"/>
 <script type="text/javascript" src="js/jquery.js" ></script>
 <script type="text/javascript" src="js/appplus.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/all.css" media="all"/>
@@ -11,14 +11,15 @@
 body{padding:10px;}
 .illnesslist .txt{padding:5px 0;}
 .illnesslist .item{
-	width:145px; color:#333; border:1px solid #cacaca; float:left; text-align:center; margin-bottom:10px; height:44px; padding:5px 10px;
+	position:relative;
+	width:145px; color:#969696; border:1px solid #cacaca; float:left; text-align:center; margin-bottom:10px; height:44px; padding:5px 10px;
 	background:#fff;
 	outline-style:none;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;
 }
-.illnesslist .listbox .on{border:2px solid #4e98c8; padding:5px 9px;}
+.illnesslist .listbox .on{border:2px solid #4e98c8; padding:5px 9px; color:#333;}
 .illnesslist .item:nth-child(odd){margin-right:10px;}
 .illnesslist .textarea{width:280px; padding:9px;
 	-webkit-border-radius:5px;
@@ -48,9 +49,10 @@ body{padding:10px;}
 	border-radius:5px;
 }
 .mar1{margin-right:20px;}
-.illnesslist .on{ background:#0098ca; color:#FFF; padding:6px; border:0;}
+.illnesslist .btnwrap .on{ background:#0098ca; color:#FFF; padding:6px; border:0;}
 .like{background:url(images/like1.png) no-repeat left top; background-size:50% 100%; padding-left:28px;}
 .illnesslist .on .like{background:url(images/like1on.png) no-repeat left top; background-size:50% 100%; padding-left:28px;}
+.item input{text-align:center; position:absolute; top:1px; bottom:1px; left:1px; right:1px;}
 </style>
 <script>
 
@@ -63,14 +65,14 @@ body{padding:10px;}
 	<button class="item">糖尿病</button>
 	<button class="item">糖尿病肾病</button>
 	<button class="item">甲亢</button>
-	<button class="item">其他</button>
 	<button class="item">糖尿病</button>
 	<button class="item">糖尿病肾病</button>
+	<button class="item other" onclick="setinput(this)">其他</button>
 	<button class="item">甲亢</button>
 </div>
 <textarea class="textarea" placeholder="疾病描述..."></textarea>
 <div class="tip">如果你会推荐此位医生给其他病友，请点赞</div>
-<div class="btnwrap"><button class="btn1 mar1 on"><span class="like">赞</span></button><button class="btn1">不赞</button></div>
+<div class="btnwrap"><button class="btn1 mar1"><span class="like">赞</span></button><button class="btn1">不赞</button></div>
 <div class="btnwrap"><button class="btn on" onclick="fsubmit()">提交</button></div>
 <script>
 $(function(){
@@ -88,12 +90,31 @@ $(function(){
 	$('.textarea').width(textw);
 	var btn1w = Math.floor((docw-64)/2);
 	$('.btn1').width(btn1w);
-
+	$('.btn1').each(
+		function(index,el){
+			$(el).click(function(){
+				$('.btn1').removeClass('on');
+				$(this).addClass('on');
+			});
+		}
+	);
 });
 function fsubmit(){
 	location.href="index.html";	
 }
-
+function setinput(el){
+	var html = $(el).html();
+	var w = $(el).width();
+	$(el).html('<input id="inptxt" type="text" style="width:'+w+'px; background:#fff; border:0; outline-style:none;" placeholder="请填写"/>');
+	$('#inptxt').focus().blur(function(){
+		var v = $(this).val();
+		if(v!=''){
+			$(el).html(v);
+		}else{
+			$(el).html(html);
+		}
+	});
+}
 </script>
 </body>
 </html>

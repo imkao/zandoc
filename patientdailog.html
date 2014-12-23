@@ -3,19 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <title>赞医生</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1,user-scalable=no"/>
 <script type="text/javascript" src="js/jquery.js" ></script>
 <script type="text/javascript" src="js/appplus.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/all.css" media="all"/>
 <style type="text/css">
-.pos{position:fixed; bottom:0; left:0;}
+.info{background:#4e98c8; padding:10px; font-size:12px; color:#a6cbe3; position:relative; line-height:22px;}
+.info .name{color:#fff; font-size:14px; padding-right:5px;}
+.info .edit{position:absolute; right:15px; top:18px; width:26px; height:26px; background:url(images/edit.png); cursor:pointer;}
+.content{padding:10px;}
+.msgbox{margin-bottom:10px;}
+.msg{padding:10px; font-size:14px;
+-webkit-border-radius:8px;
+-moz-border-radius:8px;
+border-radius:8px;}
+.poll .pic{float:left; width:40px; height:40px;}
+.push .pic{float:right; width:40px; height:40px;}
+.poll .msg{float:left; position:relative; margin-left:10px; background:#eeeeee; color:#333;}
+.push .msg{float:right; position:relative; margin-right:10px; background:#4e98c8; color:#fff;}
+.poll .arr{width:0; height:0; border:5px solid #fff; border-right:5px solid #eeeeee; position:absolute; left:-10px; top:14px; z-index:-1;}
+.push .arr{width:0; height:0; border:5px solid #fff; border-left:5px solid #4e98c8; position:absolute; right:-10px; top:14px; z-index:-1;}
+.bar{position:fixed; bottom:0; left:0; padding:2% 5%; border-top:1px solid #c8c8c8; width:90%;}
+.bar .inp{height:24px; border:1px solid #c8c8c8; width:70%; margin-right:5%;float:left;  padding:1% 2%;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+box-shadow:0 2px 6px 0 #ddd inset;
+}
+.bar .btn{height:30px; border:0; width:20%; background:#000; color:#fff; float:right; text-align:center; font-size:14px; line-height:30px;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+}
+
 </style>
 <script>
 
 </script>
 </head>
-<body class="illnesslist"><a href="index.html">
-<div class="txt"><img src="tmp/2.jpg" width="100%"/></div>
-<img src="tmp/2.png" width="100%" class="pos"/></a>
+<body class="ilist">
+<div class="info">
+	<div class="txt"><span class="name">李春来</span>男24岁</div>
+	<div class="txt">II型糖尿病伴甲亢 高血压</div>
+	<span class="edit"></div>
+</div>
+<div class="content">
+	<div class="msgbox poll clearfix">
+		<div class="pic"><img src="tmp/t1.jpg" width="40" height="40"/></div>
+		<div class="msg">
+			<div class="txt">我感觉很不好，总是提不起精神</div>
+			<span class="arr"></span>
+		</div>
+	</div>
+	<div class="msgbox push clearfix">
+		<div class="pic"><img src="tmp/3.jpg" width="40" height="40"/></div>
+		<div class="msg">
+			<div class="txt">别担心，我有新苏菲360弹力贴身</div>
+			<span class="arr"></span>
+		</div>
+	</div>
+</div>
+<div class="bar">
+	<input type="text" class="inp" placeholder="点击回复..."/>
+	<a href="#" class="btn">发送</a>
+</div>
 </body>
 </html>

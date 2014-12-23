@@ -40,7 +40,7 @@ border-radius:25px;
 <body>
 <div class="reg1">
 	<div class="headerpic"><img src="tmp/t1.jpg"/></div>
-	<div class="txt">我们只为有执业医师资格的医师和相应资质护理人员提供服务，请确保你输入的信息准确，将来不可修改。</div>
+	<div class="txt">请输入您的真实信息且不可更改，本平台和相应医生不为虚假信息的用户提供服务，且不为相关结果负责</div>
 	<div class="item"><label>姓名</label><input type="text" name="name" class="inp1" placeholder="请填写真实姓名"/><span>*</span></div>
 	<div class="item clearfix"><label>性别</label><input type="text" id="sex" class="inp1" placeholder="请选择"/><select id="sexselect" name="sex" onchange="setvalue(this)"><option>请选择</option><option>男</option><option>女</option></select></span><span>*</span></div>
 	<div class="item clearfix"><label>手机号码</label><div class="sexwrap"><input type="number" name="mobile" class="inp1" placeholder="请填写有效号码"/></div><span>*</span></div>
@@ -49,7 +49,7 @@ border-radius:25px;
 </div>
 <script>
 function fsubmit(){
-	location.href="regs2.html";	
+	location.href="index.html";	
 }
 function setvalue(el){
 	var s = el.value;

@@ -3,18 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <title>赞医生</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1,user-scalable=no"/>
 <script type="text/javascript" src="js/jquery.js" ></script>
 <script type="text/javascript" src="js/appplus.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/all.css" media="all"/>
 <style type="text/css">
-.pg{margin:10px auto; text-align:center;}
+.palist{padding:10px;}
+.txt{padding:5px 0;}
+.listbox{border:1px solid #c6c6c6;
+-webkit-border-radius:8px;
+-moz-border-radius:8px;
+border-radius:8px;
+}
+.item{border-bottom:1px solid #c6c6c6; font-size:14px;}
+.item:last-child{border-bottom:0;}
+.bar{float:left; width:20%; position:relative; border-right:1px solid #c6c6c6; padding:3% 2%;}
+.bar .like,.bar .unlike{position:absolute; left:10px; top:5px; background:url(images/like2on.png); background-size:100% 100%; width:20px; height:20px;}
+.bar .unlike{background:url(images/like2.png); background-size:100% 100%;}
+.status{float:left; width:70%; padding:3% 2%;}
+.status .name{float:left; width:60px; color:#4e98c8;}
+.hos .name{color:#333;}
+.bar .num{float:right;}
+.close{color:#db2944; float:right}
+.hostxt{padding-top:10px;}
 </style>
 <script>
 
 </script>
 </head>
-<body class="">
-<div class="pg"><a href="patientdailog.html"><img src="tmp/1.png" width="90%"/></a></div>
+<body class="palist">
+<div class="txt">当前病人</div>
+<div class="listbox">
+	<ul class="item clearfix">
+		<li class="bar"><span class="like"></span><span class="num">562</span></li>
+		<li class="status"><a href="#" class="name">李春来</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="like"></span><span class="num">334</span></li>
+		<li class="status"><a href="#" class="name">蔡国强</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="num">257</span></li>
+		<li class="status"><a href="#" class="name">陈冠中</a><span>II型糖尿病血性...</span></li>
+	</ul>
+</div>
+<div class="txt hostxt">历史病人</div>
+<div class="listbox hos">
+	<ul class="item clearfix">
+		<li class="bar"><span class="unlike"></span><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">武生</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="unlike"></span><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">蔡国强</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">陈冠中</a><span>II型糖尿病血性...</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="unlike"></span><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">武生</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="unlike"></span><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">蔡国强</a><span>II型糖尿病伴甲亢</span></li>
+	</ul>
+	<ul class="item clearfix">
+		<li class="bar"><span class="close">关闭</span></li>
+		<li class="status"><a href="#" class="name">陈冠中</a><span>II型糖尿病血性...</span></li>
+	</ul>
+</div>
+<script>
+$(function(){
+	$('.item').click(function(){
+		location.href='patientdailog.html';
+	});
+})
+</script>
 </body>
 </html>
