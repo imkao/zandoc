@@ -105,13 +105,17 @@ function fsubmit(){
 function setinput(el){
 	var html = $(el).html();
 	var w = $(el).width();
+	var value = '';
 	$(el).html('<input id="inptxt" type="text" style="width:'+w+'px; background:#fff; border:0; outline-style:none;" placeholder="请填写"/>');
+	if(html!='其他'){
+		$('#inptxt').val(html);	
+	}
 	$('#inptxt').focus().blur(function(){
 		var v = $(this).val();
 		if(v!=''){
 			$(el).html(v);
 		}else{
-			$(el).html(html);
+			$(el).html('其他');
 		}
 	});
 }
